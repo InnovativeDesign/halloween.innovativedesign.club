@@ -23,12 +23,13 @@ function shuffle(array) {
     return array;
 }
 
+let year = 'fa20';
 // vertical images [1,2,3]
 let container = document.querySelector(".img-container");
-let rand = random(27);
+let rand = random(15);
 
 let img = document.createElement("img");
-img.src = "img/" + rand + ".png";
+img.src = "img/" + year + '/' + rand + ".png";
 
 if (rand <= 3) {
     img.className = "full-height";
@@ -39,7 +40,7 @@ if (rand <= 3) {
 container.appendChild(img);
 
 let imgs = []
-for (let i = 1; i < 28; i++) {
+for (let i = 1; i < 16; i++) {
     if (i !== rand) {
         imgs.push(i);
     }
@@ -54,7 +55,7 @@ for (let i = 0; i < imgs.length; i++) {
     container.className = "img-container";
 
     let img = document.createElement("img");
-    img.src = "img/" + imgIndex + ".png";
+    img.src = "img/"  + year + '/' + imgIndex + ".png";
     if (imgIndex <= 3) {
         img.className = "full-height";
     } else {
